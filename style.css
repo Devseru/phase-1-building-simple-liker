@@ -1,66 +1,96 @@
+/* Body styling */
 body {
   margin: 5% 10%;
-  background-color: rgb(29,161,242);
-}
-
-.like-glyph {
-  cursor: pointer;
+  background-color: rgb(29, 161, 242); /* Background color for the whole page */
+  font-family: Arial, sans-serif; /* Default font family */
 }
 
 body h1 {
-  color: #FFF;
+  color: #FFF; /* White color for the main header */
 }
 
+/* Header styling */
 body > header {
   margin-bottom: 5%;
 }
 
+/* Styling for individual media posts */
 article.media-post {
-  border: solid 1px #000;
-  margin: 2% 3%;
-  background-color: #fff;
+  border: solid 1px #000; /* Black border around posts */
+  margin: 2% 3%; /* Margins around posts */
+  background-color: #fff; /* White background for posts */
+  border-radius: 8px; /* Rounded corners for posts */
+  overflow: hidden; /* Prevents child elements from overflowing */
 }
 
+/* Styling for paragraph inside media posts */
 article.media-post > p {
-  background-color: rgba(0,123,255,0.25);
-  padding: 1em 2em;
+  background-color: rgba(0, 123, 255, 0.25); /* Light blue background */
+  padding: 1em 2em; /* Padding around text */
+  border-radius: 4px; /* Rounded corners for the paragraph */
 }
 
+/* Header inside media posts */
 article.media-post > header {
-  padding: 1em 2em;
-  background-color: rgb(225,232,237);
+  padding: 1em 2em; /* Padding around header */
+  background-color: rgb(225, 232, 237); /* Light gray background */
+  border-bottom: 1px solid #ddd; /* Subtle bottom border */
 }
 
+/* Footer inside media posts */
 article.media-post > footer {
-  color: rgb(170,184,194);
+  color: rgb(170, 184, 194); /* Light gray text color */
 }
 
+/* List inside footer of media posts */
 article.media-post > footer ul {
-  list-style-type: none;
+  list-style-type: none; /* Removes default list styling */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
 }
 
-#modal {
-  border-radius: 10px;
-  background-color: maroon;
-  color: white;
+/* Styling for the like button */
+.like {
+  cursor: pointer; /* Shows pointer cursor on hover */
+  display: flex;
+  align-items: center; /* Centers items vertically */
+  font-size: 18px; /* Sets font size for the like button */
+}
 
-  margin: 1em;
-  padding: 1em;
+/* Styling for the heart glyph */
+.like-glyph {
+  font-size: 24px; /* Larger font size for the heart glyph */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
 
-  position: fixed;
+/* Styles for the activated heart */
+.activated-heart .like-glyph {
+  color: red; /* Red color for the filled heart */
+}
+
+/* Error modal styling */
+#error-modal {
+  position: fixed; /* Fixed position on the screen */
   top: 0;
   left: 0;
-  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centered modal */
 }
 
-#modal p {
-  margin-bottom: 0;
+/* Styling for the error message inside the modal */
+#error-message {
+  background: #fff; /* White background for the modal content */
+  padding: 20px;
+  border-radius: 5px; /* Rounded corners */
+  max-width: 90%; /* Responsive max-width */
+  text-align: center; /* Centered text */
 }
 
-.activated-heart {
-  color: red;
-}
-
+/* Hide elements with .hidden class */
 .hidden {
-  visibility: hidden;
+  display: none; /* Hides the element */
 }
